@@ -1,0 +1,25 @@
+Belajar lagi struktur project dan code convention
+
+https://github.com/justinwasilenko/Unity-Style-Guide#compiling
+
+
+Ada beberapa hal penting dalam ngebuat script
+Yang pertama, untuk setiap script yang kamu buat tolong dikasih namespace, ada pembahasannya di link atas.
+
+Kenapa namespace penting?
+Jadi simplenya itu menjadikan game kamu itu jadi sebuah library/assets package. 
+Jadi ketika kamu ingin membuat game serupa, misal sequel JustStance2 atau game baru tapi mekaniknya masih ngebawa JustStance.
+Kamu tinggal include aja namespacenya ketika buat game baru terus inherit segala kebutuhan di class yg dibuat.
+Tentu dengan catatan projectnya sudah granular, artinya loose coupling dan high cohesive.
+
+Lalu pada saat membuat class, jangan lupa kasih region pake notasi #region untuk misahin mana field(yang private), property(yang public), method dan hasil implementasi interface
+Gunanya kalau kayak gini biar mempermudah dan merapikan juga struktur code
+
+Terus sama naming ikuti style di link atas juga.
+
+Project struktur yg harus digaris bawahi sebenernya kalau kamu buat sendiri asset yang berhubungan dengan project kamu, masukin ke folder Appsnya (Namanya JustStance, dah aku bikinin)
+Nah untuk yang diluarnya itu berhubungan dengan asset di luar sistem yg kamu buat misal kamu install package ato asset dari market dll. Ada contohnya di link yg aku kasih, tapi standarnya aga beda cuma
+ikutin aja garis besarnya seperti apa gtu.
+
+Logic logic belum aku periksa tapi dari apa yang aku liat, masih banyak yg high coupling gtu... belum terlalu granular dan banyak script yang kayaknya basecodenya bisa dibuat jadi abstract class atau interface.
+Lalu penamaan juga jangan ambigu, misal property namanya player tapi datanya Transform aja, harusnya dinamain playerTransform atau playerPosition.
